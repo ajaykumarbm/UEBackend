@@ -1,0 +1,18 @@
+curl --request POST \
+  --url https://demo.spreecommerce.org/api/v2/storefront/account \
+  --header 'Content-Type: application/vnd.api+json' \
+  --data '{
+  "user": {
+    "email": "john@snow.org",
+    "first_name": "John",
+    "last_name": "Snow",
+    "password": "spree123",
+    "password_confirmation": "spree123",
+    "public_metadata": {
+      "user_segment": "supplier"
+    },
+    "private_metadata": {
+      "has_abandoned_cart": false
+    }
+  }
+}'
